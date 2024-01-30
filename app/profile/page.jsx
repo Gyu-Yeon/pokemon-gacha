@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import pic from "../../public/mockdata/17_hires.png";
+import CardImage from "./cardImage";
 
 const Profile = () => {
   const [cards, setCards] = useState([]);
@@ -17,7 +18,7 @@ const Profile = () => {
     fetchData();
   }, []);
 
-  const mouseHandler = (e) => {
+  const onMouseHandler = (e) => {
     let x = e.nativeEvent.offsetX;
     let y = e.nativeEvent.offsetY;
     // console.log(x, y);
@@ -35,7 +36,7 @@ const Profile = () => {
     <div>
       <div
         onMouseMove={(e) => {
-          mouseHandler(e);
+          onMouseHandler(e);
         }}
         onMouseLeave={(e) => {
           mouseOutHandler(e);
@@ -44,6 +45,7 @@ const Profile = () => {
       >
         <img className="card" src="/mockdata/17_hires.png" alt="" />
       </div>
+      <CardImage imgSource={"/mockdata/17_hires.png"} />
     </div>
   );
 };
