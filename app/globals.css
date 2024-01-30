@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.container {
+    position: relative;
+    margin: auto;
+    margin-top: 250px;
+    width: 320px;
+    height: 4%;
+    transition: all 0.1s;
+  }
+  
+  .card {
+    width: 320px;
+    height: 410px;
+  }

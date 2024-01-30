@@ -1,18 +1,24 @@
 import { Schema, model, models } from 'mongoose';
 
 const CardSchema = new Schema({
-  cardOwner: {
-    type: Schema.Types.ObjectId,
-    ref: 'User',
-  },
   name: {
     type: String,
-    required: [true, 'Name is required.'],
   },
   imgSource: {
     type: String,
-    required: [true, 'imgSource is required.'],
-  }
+  },
+  id: {
+    type: String,
+  },
+  types: {
+    type: [String],
+  },
+  rarity: {
+    type: String,
+  },
+  hp: {
+    type: String,
+  },
 });
 
 const Card = models.Card || model('Card', CardSchema);
